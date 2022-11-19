@@ -22,7 +22,9 @@ module.exports = {
       fontFamily: {
       sans: ['Josefin Sans', 'sans-serif'],
       alata: ['Alata', 'sans-serif'],
-
+      },
+      letterSpacing:{
+        widest: '.3em'
       }
     },
   },
