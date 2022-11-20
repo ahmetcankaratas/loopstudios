@@ -31,6 +31,53 @@
     @apply absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70
 }
 
+/* Hamburger Menu */
+.menu_btn {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+}
+
+.menu_btn-top,
+.menu_btn-middle,
+.menu_btn-bottom {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+
+.menu_btn-middle {
+    transform: translateY(7px);
+}
+
+.menu_btn-bottom {
+    transform: translateY(14px);
+}
+
+.menu-open {
+    transform: rotate(90deg)
+}
+
+.menu-open .menu_btn-top{
+    transform: rotate(45deg) translateY(6px) translateX(6px)
+}
+
+.menu-open .menu_btn-middle{
+    display: none;
+}
+
+.menu-open .menu_btn-bottom{
+    transform: rotate(-45deg) translateY(6px) translateX(-6px)
+}
+
+
 @media(max-width: 576px){
     #hero {
         background-image: url(./../assets/images/mobile/image-hero.jpg);
